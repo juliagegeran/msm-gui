@@ -6,6 +6,18 @@
   Go back
 </a>
 
+
+<div>
+<a href = "/delete_movie/<%=@the_movie.id%>"> Delete movie </a>
+</div>
+<hr>
+
+<hr>
+  <form>
+  <div>
+  <button></button>
+  </form>
+
 <hr>
 
 <dl>
@@ -47,6 +59,7 @@
   <dt>
     Director
   </dt>
+
   <dd>
     <% dir_id = @the_movie.director_id %>
     
@@ -54,7 +67,13 @@
     
     <% the_director = matching_directors.at(0) %>
 
+
+  <%if the_director == nil%>
+    Uh oh! We weren't able to find a director for this movie.
+  <%else%>
     <%= the_director.name %>
+  <%end%>
+
   </dd>
 
   <dt>

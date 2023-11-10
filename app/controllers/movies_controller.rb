@@ -35,4 +35,12 @@ class MoviesController < ApplicationController
     
     #redirect the user back to the movies index page
   end
+
+  def delete
+    movie_id = params.fetch("movie_id")
+    this_movie = Movie.where({:id => movie_id}).at(0)
+    this_movie.destroy
+
+    redirect_to("/movies")
+  end
 end
