@@ -69,5 +69,9 @@
   },
   "files.associations": {
     "*.html.erb": "erb"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.defaultFoldingRangeProvider": "vscode.html-language-features"
   }
 }
