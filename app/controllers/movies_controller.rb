@@ -26,7 +26,7 @@ class MoviesController < ApplicationController
     m.director_id = params.fetch("the_director_id")
     m.save
 
-    redirect_to("https://wikipedia.org", allow_other_host: true)
+    redirect_to("/movies")
     #create a record in the table
     
     #populate each column with user input
