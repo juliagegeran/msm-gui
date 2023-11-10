@@ -13,12 +13,33 @@
 <hr>
 
 <hr>
-  <form>
+  <form action = "/modify_movie_record/<%=@movie.id%>" method = "post">
   <div>
-  <label>
-  
+  <label for = "new_title_field">Title</label>
+<input id = "new_title_field" name = "the_title" type = "text" value = "<%=@the_movie.title%>">
   </div>
-  <button></button>
+  
+  <div>
+  <label for = "new_year_field">Year</label>
+  <input id = "new_year_field" name = "the_year" type = "text" value = "<%=@the_movie.year%>">
+  </div>
+
+  <div>
+  <label for = "new_duration_field">Duration</label>
+  <input id = "new_duration_field" name = "the_duration" type = "text" value = "<%=@the_movie.duration%>">
+  </div>
+
+  <div>
+  <label for = "new_image_field">Image</label>
+  <input id = "new_image_field" name = "the_image" type = "text" value = "<%=@the_movie.image%>">
+  </div>
+
+  <div>
+  <label for = "new_director_id">Director ID</label>
+  <input id = "new_director_id" name = "the_director_id" type = "text" value = "<%=@the_movie.direcotr_id%>">
+  </div>
+  
+  <button>Update movie</button>
   </form>
 
 <hr>

@@ -43,4 +43,20 @@ class MoviesController < ApplicationController
 
     redirect_to("/movies")
   end
+
+  def modify
+    movie_id = params.fetch("movie_id")
+    this_movie = Movie.where({:id => movie_id}.at(0)
+
+    this_movie.title = params.fetch("the_title")
+    this_movie.year = params.fetch("the_year")
+    this_movie.year = params.fetch("the_duration")
+    this_movie.description = params.fetch("the_description")
+    this_movie.image = params.fetch("the_image")
+    this_movie.director_id = params.fetch("the_director_id")
+    
+    this_movie.save
+
+    redirect_to("/movies/:movie_id")
+  end 
 end
