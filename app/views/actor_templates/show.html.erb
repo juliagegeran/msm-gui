@@ -6,6 +6,31 @@
   Go back
 </a>
 
+<div><a href="/delete_actor/<%=@the_actor.id%>">Delete actor</a></div>
+
+<hr>
+<form action="/modify_actor_record/<%=@the_actor.id%>">
+  <div>
+    <label for="new_name_field">Name</label>
+    <input type="text" id = "new_name_field" name = "the_name" value = "<%=@the_actor.name%>">
+  </div>
+
+  <div>
+    <label for="">Dob</label>
+    <input type="text">
+  </div>
+
+  <div>
+    <label for="">Bio</label>
+    <textarea name="" id="" cols="30" rows="10"><%=@the_actor.bio%></textarea>
+  </div>
+
+  <div>
+    <label for="">Image</label>
+    <input type="text">
+  </div>
+
+</form>
 <hr>
 
 <dl>

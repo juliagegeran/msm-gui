@@ -25,4 +25,12 @@ class ActorsController < ApplicationController
 
     redirect_to("/actors")
   end
+
+  def delete
+    actor_id = params.fetch("actor_id")
+    actor_record = Actor.where(:id => actor_id).at(0)
+    actor_record.destroy
+
+    redirect_to("/actors")
+  end
 end
